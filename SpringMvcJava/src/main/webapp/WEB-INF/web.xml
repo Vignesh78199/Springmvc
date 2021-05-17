@@ -1,0 +1,38 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+	<filter>
+		<filter-name>SpringMvcFilter</filter-name>
+		<display-name>SpringMvcFilter</display-name>
+		<description></description>
+		<filter-class>com.spring.filter.SpringMvcFilter</filter-class>
+	</filter>
+	
+	
+	<filter-mapping>
+		<filter-name>SpringMvcFilter</filter-name>
+		<url-pattern>/Authenticated</url-pattern>
+	</filter-mapping>
+	
+
+
+
+
+<servlet>
+<servlet-name>SpringMvcJava</servlet-name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>SpringMvcJava</servlet-name>
+<url-pattern>/</url-pattern>
+</servlet-mapping>
+<welcome-file-list>  
+   <welcome-file>/WEB-INF/jsp/Login.jsp</welcome-file>  
+  </welcome-file-list>  
+  
+</web-app>
+
